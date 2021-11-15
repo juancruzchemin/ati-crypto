@@ -25,8 +25,8 @@ const Crypto = () => {
         }}
       >
         <Desplegable />
-        <h3 id="mostrarInfo"></h3>
       </div>
+      <h3 id="mostrarInfo"></h3>
       {/* <h3 style={{ marginRight: "110px" }}>Valor: </h3> */}
       {/* <Boton /> */}
     </div>

@@ -21,7 +21,7 @@ const Menu = () => {
         autocomplete="off"
       />
       <label class="btn btn-outline-primary" for="btnradio1">
-        Inicio
+        <a href="/inicio">Inicio</a>
       </label>
 
       <input
@@ -32,7 +32,7 @@ const Menu = () => {
         autocomplete="off"
       />
       <label class="btn btn-outline-primary" for="btnradio2">
-        Moneda
+        <a href="/moneda">Moneda</a>
       </label>
 
       <input
@@ -43,7 +43,7 @@ const Menu = () => {
         autocomplete="off"
       />
       <label class="btn btn-outline-primary" for="btnradio3">
-        Reportes
+        <a href="/reportes">Reportes</a>
       </label>
     </div>
   );

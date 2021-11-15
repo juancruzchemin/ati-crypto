@@ -1,8 +1,9 @@
 import React from "react";
+import Informacion from "./Informacion";
 
 const Desplegable = () => {
   const mostrarValor = () => {
-    document.getElementById("mostrarInfo").innerHTML = "Informacion";
+    document.getElementById("mostrarInfo").innerHTML = Informacion;
   };
 
   return (
