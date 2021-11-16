@@ -1,11 +1,7 @@
 import React from "react";
-import Informacion from "./Informacion";
+import { Link } from "react-router-dom";
 
-const Desplegable = () => {
-  const mostrarValor = () => {
-    document.getElementById("mostrarInfo").innerHTML = Informacion;
-  };
-
+const Desplegable = (props) => {
   return (
     <>
       <div class="dropdown">
@@ -17,23 +13,32 @@ const Desplegable = () => {
           aria-expanded="false"
           style={{ width: "130px" }}
         >
-          Moneda
+          {props.titulo}
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
-            <a class="dropdown-item" onClick={mostrarValor}>
-              Moneda1
-            </a>
+            <Link
+              to={{ pathname: "/informacion/{props.eleccion1}" }}
+              class="dropdown-item"
+            >
+              {props.eleccion1}
+            </Link>
           </li>
           <li>
-            <a class="dropdown-item" onClick={mostrarValor}>
-              Moneda2
-            </a>
+            <Link
+              to={{ pathname: "/informacion/{props.eleccion2}" }}
+              class="dropdown-item"
+            >
+              {props.eleccion2}
+            </Link>
           </li>
           <li>
-            <a class="dropdown-item" onClick={mostrarValor}>
-              Moneda3
-            </a>
+            <Link
+              to={{ pathname: "/informacion/{props.eleccion3}" }}
+              class="dropdown-item"
+            >
+              {props.eleccion3}
+            </Link>
           </li>
         </ul>
       </div>

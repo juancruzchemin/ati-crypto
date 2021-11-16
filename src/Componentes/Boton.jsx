@@ -1,6 +1,6 @@
 import React from "react";
 
-const Boton = () => {
+const Boton = (props) => {
   return (
     <>
       <button
@@ -13,7 +13,7 @@ const Boton = () => {
           marginTop: "112px",
         }}
       >
-        Actualizar
+        {props.nombre}
       </button>
     </>
   );

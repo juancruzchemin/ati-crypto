@@ -1,3 +1,13 @@
-const Informacion =
-  "<div id='informacion' ><h1>Moneda1</h1> </hr> <h2>Valor: </h2> </hr> <button type='button' className='btn btn-primary'>Actualizar</button></div>";
+import React from "react";
+import Crypto from "./Crypto";
+
+const Informacion = (props) => {
+  return (
+    <>
+      <Crypto />
+      <h1>{props.titulo}</h1>
+    </>
+  );
+};
+
 export default Informacion;
