@@ -45,6 +45,7 @@ const Menu = () => {
       <label class="btn btn-outline-primary" for="btnradio3">
         <a href="/reportes">Reportes</a>
       </label>
+      
     </div>
   );
 };

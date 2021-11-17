@@ -6,6 +6,7 @@ import Inicio from "./Componentes/Secciones/Inicio";
 import Informacion from "./Componentes/Informacion";
 import Header from "./Componentes/Secciones/Header";
 
+
 function App() {
   return (
     <div>
