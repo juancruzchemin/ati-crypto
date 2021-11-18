@@ -1,4 +1,5 @@
 import React, {useState} from  "react"
+import  './styles/Card.css'
 export default function Formularios(){
 
     const[nombre,setNombre]=useState("");
@@ -8,22 +9,24 @@ export default function Formularios(){
 
 return(
 
+<div className="fondo">
 
+<form className="card fondo">
 
-<form className="card">
-
-<label htmlFor="">Nombre</label>
-<input 
+<label className="nombrelabel" htmlFor="">Nombre</label>
+<input  className="nombreform"
 type="text"
  id="nombre" 
 name="nombre" 
 value={nombre}
 onChange={(e)=> setNombre(e.target.value)}
 />
+
 <br></br>
 <br></br>
-<label htmlFor="">Mail</label>
-<input 
+
+<label className="nombrelabel" htmlFor="">Mail</label>
+<input  className="nombreform"
 type="text"
  id="mail" 
 name="mail" 
@@ -32,7 +35,7 @@ onChange={(e)=> setMail(e.target.value)}
 />
 <br></br>
 <div className="btn ">
-<p>Elegir Moneda</p>
+<p className="nombrelabel">Elegir Moneda</p>
 <select name="moneda" onChange={(e)=> setMoneda(e.target.value)} defaultValue="" className="btn btn-primary">
     <option value="">----</option>
     <option value="bit">Bitcoin</option>
@@ -42,20 +45,20 @@ onChange={(e)=> setMail(e.target.value)}
 </div>
 
 <br></br>
-<div className="btn">
-<p>Elegir alerta</p>
-<label htmlFor="" className>1-hs</label>
-<input type="radio" id="1hs" name="alerta" value="1hs" onChange={(e)=> setAlerta(e.target.value)}/>
-<label htmlFor="">1-día</label>
-<input type="radio" id="1dia" name="alerta" value="1dia" onChange={(e)=> setAlerta(e.target.value)}/>
-<label htmlFor="">1-sem</label>
-<input type="radio" id="1sem" name="alerta" value="1sem" onChange={(e)=> setAlerta(e.target.value)}/>
-<label htmlFor="">Cambios</label>
-<input type="radio" id="cambios" name="alerta" value="cambios" onChange={(e)=> setAlerta(e.target.value)}/>
+<div className="fondoradio">
+<p className="nombrelabel">Elegir alerta</p>
+<label htmlFor=""  className="nombreradio">1-hs</label>
+<input type="radio" id="1hs" name="alerta" value="1hs"  className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
+<label htmlFor=""  className="nombreradio">1-día</label>
+<input type="radio" id="1dia" name="alerta" value="1dia" className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
+<label htmlFor=""  className="nombreradio">1-sem</label>
+<input type="radio" id="1sem" name="alerta" value="1sem" className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
+<label htmlFor=""  className="nombreradio">Cambios</label>
+<input type="radio" id="cambios" name="alerta" value="cambios" className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
 </div>
 
 </form>
-
+</div>
 
 )
 }

@@ -1,8 +1,4 @@
-.card {
-    border: none;
-    border-radius: 8px;
-    background: url('../../images/circles.png') no-repeat, linear-gradient(to right, #A74CF2, #617BFB);
-}
+
 .Fitness-User-Info {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -24,6 +20,26 @@
     font-size: 11px;
     color: white;
 }
+.nombreform{
+    width: 300px;
+    margin: 0 auto;
+}
+.nombrelabel{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto;
+    font-size: larger;
+    color: white;
+}
+.nombreradio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ margin-left: 10px;
+     font-size: larger;
+     color: white;
+ }
+.fondo {background-image: url(https://fotos.perfil.com/2021/02/10/trim/635/357/bitcoins-criptomonedas-20210210-1125945.jpg?webp);}
+.fondoradio{background-color:black;width: 400px;margin: 0 auto;text-align: center; border-top-left-radius: 50px;border-top-right-radius: 50px;}
+
+
 .Fitness-Add {
     display: block;
     margin-left: auto;
