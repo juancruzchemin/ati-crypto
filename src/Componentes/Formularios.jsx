@@ -1,5 +1,6 @@
 import React, {useState} from  "react"
 import  './styles/Card.css'
+import ValorCripto from "./ValorCripto";
 
 
 export default function Formularios(){
