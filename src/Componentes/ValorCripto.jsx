@@ -12,11 +12,8 @@ class ValorCripto extends Component{
     } 
     render(){
         return(
-<<<<<<< HEAD
+
         <h1>no anda loco</h1>)
-=======
-        <h1>no anda wachin</h1>)
->>>>>>> auxfran
     }
    
 
