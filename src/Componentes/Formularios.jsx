@@ -1,11 +1,16 @@
 import React, {useState} from  "react"
 import  './styles/Card.css'
+import ValorCripto from "./ValorCripto";
+
+
 export default function Formularios(){
 
+    
     const[nombre,setNombre]=useState("");
     const[mail,setMail]=useState("");
     const[alerta,setAlerta]=useState("");
     const[moneda,setMoneda]=useState("");
+    
 
 return(
 
@@ -57,6 +62,9 @@ onChange={(e)=> setMail(e.target.value)}
 <input type="radio" id="cambios" name="alerta" value="cambios" className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
 </div>
 
+<div>
+
+</div>
 </form>
 </div>
 

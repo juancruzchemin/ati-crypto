@@ -2,6 +2,7 @@ import React from "react";
 import Boton from "./Boton";
 import Desplegable from "./Desplegable";
 
+
 const Crypto = () => {
   return (
     <div className="container">
@@ -34,6 +35,7 @@ const Crypto = () => {
       <h3 id="mostrarInfo"></h3>
       {/* <h3 style={{ marginRight: "110px" }}>Valor: </h3> */}
       {/* <Boton nombre="actualizar" /> */}
+     
     </div>
   );
 };
