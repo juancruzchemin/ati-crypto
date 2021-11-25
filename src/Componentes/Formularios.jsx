@@ -5,7 +5,7 @@ import ValorCripto from "./ValorCripto";
 
 export default function Formularios(){
 
-    
+   
     const[nombre,setNombre]=useState("");
     const[mail,setMail]=useState("");
     const[alerta,setAlerta]=useState("");
@@ -62,9 +62,7 @@ onChange={(e)=> setMail(e.target.value)}
 <input type="radio" id="cambios" name="alerta" value="cambios" className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
 </div>
 
-<div>
 
-</div>
 </form>
 </div>
 

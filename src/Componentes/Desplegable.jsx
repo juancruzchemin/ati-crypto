@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Desplegable = (props) => {
+  function fuiactivado (e){
+    e.preventDefault()
+   alert('El valor es');
+
+ };
+
   return (
     <>
       <div class="dropdown">
@@ -33,7 +39,7 @@ const Desplegable = (props) => {
             </Link>
           </li>
           <li>
-            <Link
+            <Link onClick={fuiactivado}
               to={{ pathname: "/informacion/{props.eleccion3}" }}
               class="dropdown-item"
             >
