@@ -8,7 +8,8 @@ const Moneda = () => {
     <div>
       <div className="container">
         <Crypto />
-        <ValorCripto/>
+        <div className="nombreform">
+        <ValorCripto/></div>
       </div>
     </div>
   );
