@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ValorCripto from "./ValorCripto";
 
 const Desplegable = (props) => {
   function fuiactivado (e){
     e.preventDefault()
-   alert('El valor es');
-
+    alert("muestro moneda");
  };
 
   return (

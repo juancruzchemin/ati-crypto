@@ -5,7 +5,10 @@ import ValorCripto from "./ValorCripto";
 
 export default function Formularios(){
 
-   
+    function fuiactivado (e){
+        e.preventDefault()
+        alert("muestro moneda");
+     };
     const[nombre,setNombre]=useState("");
     const[mail,setMail]=useState("");
     const[alerta,setAlerta]=useState("");
@@ -61,7 +64,9 @@ onChange={(e)=> setMail(e.target.value)}
 <label htmlFor=""  className="nombreradio">Cambios</label>
 <input type="radio" id="cambios" name="alerta" value="cambios" className="nombreradio" onChange={(e)=> setAlerta(e.target.value)}/>
 </div>
-
+<div className="nombrelabel">
+    <button className="nombrelabel btn-primary" onClick={fuiactivado}>Enviar</button>
+</div>
 
 </form>
 </div>
