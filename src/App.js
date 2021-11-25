@@ -6,7 +6,6 @@ import Inicio from "./Componentes/Secciones/Inicio";
 import Informacion from "./Componentes/Informacion";
 import Header from "./Componentes/Secciones/Header";
 
-
 function App() {
   return (
     <div>
@@ -18,9 +17,9 @@ function App() {
         <Route exact path="/reportes" component={Reportes} />
         <Route
           exact
-          path="/informacion/:moneda"
+          path="/informacion/:cryptoID"
           component={(props) => <Informacion {...props} titulo="vacio" />}
-        ></Route>{" "}
+        ></Route>
       </Router>
     </div>
   );

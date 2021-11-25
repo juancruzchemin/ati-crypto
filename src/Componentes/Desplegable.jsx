@@ -18,7 +18,7 @@ const Desplegable = (props) => {
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
             <Link
-              to={{ pathname: "/informacion/{props.eleccion1}" }}
+              to={{ pathname: `/informacion/${props.eleccion1}` }}
               class="dropdown-item"
             >
               {props.eleccion1}
@@ -26,7 +26,7 @@ const Desplegable = (props) => {
           </li>
           <li>
             <Link
-              to={{ pathname: "/informacion/{props.eleccion2}" }}
+              to={{ pathname: `/informacion/${props.eleccion2}` }}
               class="dropdown-item"
             >
               {props.eleccion2}
@@ -34,7 +34,7 @@ const Desplegable = (props) => {
           </li>
           <li>
             <Link
-              to={{ pathname: "/informacion/{props.eleccion3}" }}
+              to={{ pathname: `/informacion/${props.eleccion3}` }}
               class="dropdown-item"
             >
               {props.eleccion3}

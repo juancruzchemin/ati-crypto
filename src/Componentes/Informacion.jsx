@@ -1,11 +1,14 @@
 import React from "react";
+import { useParams } from "react-router";
 import Crypto from "./Crypto";
 
-const Informacion = (props) => {
+const Informacion = () => {
+  const crypto = useParams().cryptoID; //con esto manipulo las monedas que se eligen
+
   return (
     <>
       <Crypto />
-      <h1>{props.titulo}</h1>
+      <h1>{crypto}</h1>
     </>
   );
 };
