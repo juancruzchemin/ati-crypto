@@ -67,7 +67,6 @@ onChange={(e)=> setMail(e.target.value)}
 <div className="nombrelabel">
     <button className="nombrelabel btn-primary" onClick={fuiactivado}>Enviar</button>
 </div>
-
 </form>
 </div>
 

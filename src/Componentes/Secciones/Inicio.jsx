@@ -7,7 +7,7 @@ const Inicio = () => {
     <div>
       <h1>Inicio</h1>
       <Formularios></Formularios>
-    <ValorCripto></ValorCripto>
+    
     </div>
   );
 };
