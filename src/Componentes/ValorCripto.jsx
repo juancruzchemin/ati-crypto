@@ -4,10 +4,10 @@ import  './styles/Card.css'
 import axios from 'axios'
 class ValorCripto extends Component{
     state ={criptodata:[]}
-        componentDidMount(){
-            axios.get('https://pokeapi.co/api/v2/pokemon/')
-            .then(result=> { console.log(result.data.results)
-            const criptodata= result.data.results;
+        componentDidMount(moneda){
+            axios.get('https://xlebo5qq46.execute-api.us-east-2.amazonaws.com/cripto/cripto?cripto=BTC')
+            .then(res=> { console.log(res.data)
+            const criptodata= res.data;
             this.setState({
                 criptodata 
             })
@@ -16,16 +16,13 @@ class ValorCripto extends Component{
            
         } 
         render(){
-            const {criptodata} = this.state; 
+            const {criptodata} = this.state; //ocupando destructuracion
             return(
     
                 <div>
-                <ul>
-    
-                   {criptodata.map(pokemon => {
-                       return <li>{pokemon.name} </li>
-                   })}
-                </ul></div>
+                    <li>
+                   {criptodata.rate} </li>
+               </div>
                
          )
         
