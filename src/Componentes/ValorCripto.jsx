@@ -11,9 +11,9 @@ class ValorCripto extends Component{
         .catch(console.log)
     } 
     render(){
-        return(
-
-        <h1>no anda loco</h1>)
+        return( 
+          <h1></h1>
+        )
     }
    
 
