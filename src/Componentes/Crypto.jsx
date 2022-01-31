@@ -1,9 +1,12 @@
-import React from "react";
+
 import Boton from "./Boton";
 import Desplegable from "./Desplegable";
+import React,  {useEffect, useState} from  "react"
+import  { ValorCripto } from "./ValorCripto";
 
 
 const Crypto = () => {
+
   return (
     <div className="container">
       <div
@@ -25,12 +28,13 @@ const Crypto = () => {
           marginTop: "25px",
         }}
       >
-        <Desplegable
+        <Desplegable 
           titulo="Moneda"
-          eleccion1="Bitcoin"
+          eleccion1 ="Bitcoin"
           eleccion2="Etherium"
           eleccion3="Solana"
         />
+      
       </div>
       <h3 id="mostrarInfo"></h3>
       {/* <h3 style={{ marginRight: "110px" }}>Valor: </h3> */}

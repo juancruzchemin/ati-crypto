@@ -6,6 +6,8 @@ const Informacion = (props) => {
     <>
       <Crypto />
       <h1>{props.titulo}</h1>
+     
+      
     </>
   );
 };

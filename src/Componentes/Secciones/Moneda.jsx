@@ -2,6 +2,7 @@
 import Crypto from "../Crypto";
 import React,  {useEffect, useState} from  "react"
 import { ValorCripto } from "../ValorCripto";
+import Desplegable from "../Desplegable";
 
 
 const Moneda = () => {
@@ -11,32 +12,38 @@ const Moneda = () => {
 
   useEffect(  () => {
   getCripto();
+ 
   }, []  )
   
   
   const getCripto = async() => {  
-   const res= await ValorCripto.get('https://pokeapi.co/api/v2/pokemon')
-      setValor(res.data.results);
-      console.log(res.data.results);
+   const res= await ValorCripto.get('https://xlebo5qq46.execute-api.us-east-2.amazonaws.com/cripto/cripto?cripto=BTC')
+      setValor(res.data);
+      console.log(res.data.rate);
   }
+
+
+  
+
+
+
+
+  
   return (
     <>
  
       <div className="container">
         <Crypto />
+       
+        <div>
+        {valor.rate}
+        </div>
     
+       
       </div>
 
       <tbody className="card">
-        {
-         
-
-          valor.map(val=>(
-            <tr className="nombreform" key={val.name}>
-            <td>{val.name}</td>
-        </tr>
-          ))
-        }
+ 
    
 </tbody>
     </>

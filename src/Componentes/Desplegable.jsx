@@ -1,11 +1,19 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
+import React,  {useEffect, useState} from  "react"
+import { ValorCripto } from "./ValorCripto";
 
 const Desplegable = (props) => {
+
+// si toco bitcoin me tiene que traer el valor a la pantalla
+// por lo que tengo que hacer un onclick y en ese tiene q estar una funcion que me traiga la prop selecionada
+
+
   return (
     <>
       <div class="dropdown">
         <button
+      
           class="btn btn-secondary dropdown-toggle"
           type="button"
           id="dropdownMenuButton1"
@@ -17,11 +25,13 @@ const Desplegable = (props) => {
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
-            <Link
+            <Link 
               to={{ pathname: "/informacion/{props.eleccion1}" }}
               class="dropdown-item"
             >
+              
               {props.eleccion1}
+              
             </Link>
           </li>
           <li>
@@ -36,6 +46,7 @@ const Desplegable = (props) => {
             <Link
               to={{ pathname: "/informacion/{props.eleccion3}" }}
               class="dropdown-item"
+
             >
               {props.eleccion3}
             </Link>
