@@ -1,11 +1,16 @@
-
-import Boton from "./Boton";
 import Desplegable from "./Desplegable";
-import React,  {useEffect, useState} from  "react"
-import  { ValorCripto } from "./ValorCripto";
-
+import React from "react";
 
 const Crypto = () => {
+  const criptos = [
+    { title: "Bitcoin", value: "BTC" },
+    { title: "Ethereum", value: "ETH" },
+    { title: "Binance Coin", value: "BNB" },
+    { title: "Solana", value: "SOL" },
+    { title: "Avax", value: "AVAX" },
+    { title: "Fantom", value: "FTM" },
+    { title: "Cardano", value: "ADA" },
+  ];
 
   return (
     <div className="container">
@@ -28,18 +33,8 @@ const Crypto = () => {
           marginTop: "25px",
         }}
       >
-        <Desplegable 
-          titulo="Moneda"
-          eleccion1 ="Bitcoin"
-          eleccion2="Etherium"
-          eleccion3="Solana"
-        />
-      
+        <Desplegable titulo="Monedas" values={criptos} />
       </div>
-      <h3 id="mostrarInfo"></h3>
-      {/* <h3 style={{ marginRight: "110px" }}>Valor: </h3> */}
-      {/* <Boton nombre="actualizar" /> */}
-     
     </div>
   );
 };

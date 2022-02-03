@@ -1,15 +1,16 @@
 import React from "react";
-import Crypto from "./Crypto";
+import PropTypes from "prop-types";
 
 const Informacion = (props) => {
   return (
     <>
-      <Crypto />
-      <h1>{props.titulo}</h1>
-     
-      
+      <h1 class="text-center">{props.valor}</h1>
     </>
   );
+};
+
+Informacion.propTypes = {
+  valor: PropTypes.string,
 };
 
 export default Informacion;
