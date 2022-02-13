@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Informacion from "./Informacion";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Desplegable = (props) => {
   // si toco bitcoin me tiene que traer el valor a la pantalla
@@ -54,7 +55,21 @@ const Desplegable = (props) => {
             </li>
           ))}
         </ul>
-        {valor ? text : <p class="text-center">Seleccione el dropdown para ver el valor de la cripto que desee.</p>}
+        {valor ? (
+          <p class="text-center" style={{ marginTop: "35px" }}>
+            {text}
+            <h3 style={{ marginTop: "55px" }}>
+              ¿Quiere estar actualizado de los valores de esta cryptmoneda?
+              <p>
+                <a href="/inicio">Ingrese aca</a>
+              </p>
+            </h3>
+          </p>
+        ) : (
+          <p class="text-center">
+            Seleccione el dropdown para ver el valor de la cripto que desee.
+          </p>
+        )}
       </div>
     </>
   );
