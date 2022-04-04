@@ -1,0 +1,46 @@
+#Boton{
+    width: 40%;
+    background-color: #D6EAF8;
+    margin: 30px;
+    justify-content: center;
+    display: flexbox;
+    font-size: x-large;
+    border-radius: 8px;
+    /* Hover */
+    -webkit-transition-duration: 15s; /* Safari */
+    transition-duration: 15s;
+    /* sombra */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#Boton:hover {
+    /* hover */
+    background-color: #3b3a3a;
+    color: white;
+    /* sombra */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+#a{
+    text-decoration: none;
+}
+
+#a:hover{
+    text-shadow: white;
+    color: white;
+}
+
+#iniciodiv1{
+    display: flex;
+    margin: 0 auto;
+    justify-Content: center;
+    margin-top: 150px;
+}
+
+#iniciodiv2{
+    display: flex;
+    margin: 0 auto;
+    justify-Content: center;
+    margin-top: 55px;
+}
+

@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+}
+
+#intro{
+    margin: 25px;
+    text-align: center;
+    color: black;
+}
+
+.card{
+    margin-top: 25px;   
+    background: var(--card-color);
+    color:rgb(7, 3, 3);
+    width: 60%;
+    padding: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+    border-radius: 10px;      
+    justify-Content: left;   
+   
+}
+.card-header{
+    background: var(--card-header-color);            
+    margin: -20px;
+    padding: 20px;
+    border-radius: 20px 20px 0px 0px;
+}
+.card-body{
+    background: var(--card-body-color);
+    margin: -20px;
+    margin-left: 15%;
+    margin-top: 15px;
+    border-radius: 00px 00px 20px 20px;
+    column-count: 3;
+    height: 180px;
+  
+}
+
+

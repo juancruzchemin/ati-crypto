@@ -1,17 +1,25 @@
 import React from "react";
 import Menu from "../Menu";
+import BarraLateral from "../BarraLateral";
 
 const Header = () => {
   return (
-    <div style={{ backgroundColor: "#D6EAF8", height: "75px" }}>
-      <Menu />
-
+    <div
+      style={{ backgroundColor: "#D6EAF8", height: "75px", display: "flex" }}
+    >
+      {/* <Menu /> */}
+      <BarraLateral
+        msjPrincipal="Menu"
+        elemento1="Cotizacion"
+        elemento2="Recibir notificacion"
+        elemento3="Inicio"
+      ></BarraLateral>
       <div
         style={{
           display: "flex",
           margin: "0 auto",
           justifyContent: "center",
-          marginRight: "260px",
+          // marginRight: "260px",
         }}
       >
         <h1 style={{ marginTop: "5px" }}>Bienvenido AppCrypto</h1>

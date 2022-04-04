@@ -1,0 +1,37 @@
+#dropdownMenuButton1{
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: #D6EAF8;
+    color: black;
+    margin-top: 15px;
+}
+
+#card1{
+    background: rgb(138, 148, 130);
+    color:rgb(255, 255, 255);
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+    border-radius: 10px;      
+    justify-Content: right;
+    margin: 50px;   
+    margin-bottom: -25px;  
+
+}
+
+#text-center{
+    margin: 20px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+}
+
+#pregunta{
+    margin-top: 55px;
+}
+
+#link{
+    margin: 15px;
+    color: #94d3ff;
+    margin-top: 15px;
+}

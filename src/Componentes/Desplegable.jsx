@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Informacion from "./Informacion";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import "../Componentes/styles/desplegable.css";
 
 const Desplegable = (props) => {
   // si toco bitcoin me tiene que traer el valor a la pantalla
@@ -31,45 +32,46 @@ const Desplegable = (props) => {
 
   return (
     <>
-      <div class="dropdown text-center">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-          style={{ width: "130px" }}
-        >
-          {props.titulo}
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          {props.values.map((option) => (
-            <li>
-              <button
-                type="button"
-                className="dropdown-item"
-                onClick={() => getCripto(option)}
-              >
-                {option.title}
-              </button>
-            </li>
-          ))}
-        </ul>
-        {valor ? (
-          <p class="text-center" style={{ marginTop: "35px" }}>
-            {text}
-            <h3 style={{ marginTop: "55px" }}>
-              ¿Quiere estar actualizado de los valores de esta cryptmoneda?
-              <p>
-                <a href="/inicio">Ingrese aca</a>
-              </p>
-            </h3>
-          </p>
-        ) : (
-          <p class="text-center">
-            Seleccione el dropdown para ver el valor de la cripto que desee.
-          </p>
-        )}
+      <div id="card1">
+        <div className="dropdown text-center">
+          <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {props.titulo}
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            {props.values.map((option) => (
+              <li>
+                <button
+                  type="button"
+                  className="dropdown-item"
+                  onClick={() => getCripto(option)}
+                >
+                  {option.title}
+                </button>
+              </li>
+            ))}
+          </ul>
+          {valor ? (
+            <p id="text-center">
+              {text}
+              <h5 id="pregunta">
+                ¿Quiere estar actualizado de los valores de esta cryptmoneda?
+                <p id="link">
+                  <a href="/reportes" id="link">
+                    Ingrese aca
+                  </a>
+                </p>
+              </h5>
+            </p>
+          ) : (
+            <p className="text-center"></p>
+          )}
+        </div>
       </div>
     </>
   );

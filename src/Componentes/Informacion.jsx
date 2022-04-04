@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Informacion = (props) => {
   return (
     <>
-      <h1 class="text-center">{props.valor}</h1>
+      <h2 class="text-center">{props.valor}</h2>
     </>
   );
 };

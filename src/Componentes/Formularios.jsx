@@ -3,6 +3,7 @@ import "./styles/Card.css";
 
 export default function Formularios() {
   const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
   const [mail, setMail] = useState("");
   const [alerta, setAlerta] = useState("");
   const [moneda, setMoneda] = useState("");
@@ -23,12 +24,23 @@ export default function Formularios() {
           onChange={(e) => setNombre(e.target.value)}
         />
 
-        <br></br>
-        <br></br>
+        <label className="nombrelabel" htmlFor="">
+          Apellido
+        </label>
+
+        <input
+          className="nombreform"
+          type="text"
+          id="apellido"
+          name="apellido"
+          value={apellido}
+          onChange={(e) => setApellido(e.target.value)}
+        />
 
         <label className="nombrelabel" htmlFor="">
           Mail
         </label>
+
         <input
           className="nombreform"
           type="text"
@@ -37,25 +49,45 @@ export default function Formularios() {
           value={mail}
           onChange={(e) => setMail(e.target.value)}
         />
-        <br></br>
-        <div className="btn ">
-          <p className="nombrelabel">Elegir Moneda</p>
-          <select
-            name="moneda"
-            onChange={(e) => setMoneda(e.target.value)}
-            defaultValue=""
-            className="btn btn-primary"
-          >
-            <option value="">----</option>
-            <option value="bit">Bitcoin</option>
-            <option value="eth">Etherium</option>
-            <option value="sol">Solana</option>
-          </select>
+        <div className="monedaxalerta">
+          <div className="btn">
+            <p className="nombrelabel">Elegir Moneda</p>
+            <select
+              name="moneda"
+              onChange={(e) => setMoneda(e.target.value)}
+              defaultValue=""
+              className="btn btn-primary"
+              id="btn-primary"
+            >
+              <option value="bit">Bitcoin</option>
+              <option value="eth">Etherium</option>
+              <option value="sol">Solana</option>
+              <option value="avx">Avax</option>
+              <option value="fan">Fantom</option>
+              <option value="car">Cardano</option>
+              <option value="bnc">Binance Coin</option>
+            </select>
+          </div>
+
+          <div className="btn">
+            <p className="nombrelabel">Elegir tiempo de alerta</p>
+            <select
+              name="moneda"
+              onChange={(e) => setMoneda(e.target.value)}
+              defaultValue=""
+              className="btn btn-primary"
+              id="btn-primary"
+            >
+              <option value="1hs">1 hora</option>
+              <option value="1dia">1 dia</option>
+              <option value="1sem">1 semana</option>
+              <option value="cambios">Cambios</option>
+            </select>
+          </div>
         </div>
 
-        <br></br>
-        <div className="fondoradio">
-          <p className="nombrelabel">Elegir alerta</p>
+        {/* <div className="fondoradio">
+          <p className="nombreAlerta">Elegir alerta</p>
           <label htmlFor="" className="nombreradio">
             1-hs
           </label>
@@ -100,9 +132,11 @@ export default function Formularios() {
             className="nombreradio"
             onChange={(e) => setAlerta(e.target.value)}
           />
-        </div>
+        </div> */}
 
-        <div></div>
+        <button className="btn btn-primary" id="aceptar">
+          Aceptar
+        </button>
       </form>
     </div>
   );
