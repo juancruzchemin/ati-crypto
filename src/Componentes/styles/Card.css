@@ -50,6 +50,7 @@
 .fondo{
     margin: auto;
     margin-top: 45px;
+    align-items: center;
 }
 .Fitness-Add {
     display: block;

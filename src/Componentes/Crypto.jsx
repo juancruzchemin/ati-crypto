@@ -24,13 +24,9 @@ const Crypto = () => {
         </div>
         <div className="division">
           <div className="card-body">
-            <p>Solana</p>
-            <p>Avax</p>
-            <p>Fantom</p>
-            <p>Cardano</p>
-            <p>Bitcoin </p>
-            <p>Ethereum</p>
-            <p>Binance Coin</p>
+            {criptos.map((c) => (
+              <p>{c.title}</p>
+            ))}
           </div>
         </div>
       </div>

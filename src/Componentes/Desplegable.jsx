@@ -63,7 +63,7 @@ const Desplegable = (props) => {
                 ¿Quiere estar actualizado de los valores de esta cryptmoneda?
                 <p id="link">
                   <a href="/reportes" id="link">
-                    Ingrese aca
+                    Ingrese acá
                   </a>
                 </p>
               </h5>
