@@ -1,5 +1,4 @@
 import React from "react";
-import Menu from "../Menu";
 import BarraLateral from "../BarraLateral";
 
 const Header = () => {

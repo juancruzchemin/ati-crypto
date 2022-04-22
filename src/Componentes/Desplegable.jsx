@@ -5,9 +5,6 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../Componentes/styles/desplegable.css";
 
 const Desplegable = (props) => {
-  // si toco bitcoin me tiene que traer el valor a la pantalla
-  // por lo que tengo que hacer un onclick y en ese tiene q estar una funcion que me traiga la prop selecionada
-  // console.log(props);
   const [valor, setValor] = useState();
   const [text, setText] = useState();
 

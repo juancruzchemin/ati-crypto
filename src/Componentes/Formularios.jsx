@@ -6,7 +6,6 @@ export default function Formularios() {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [mail, setMail] = useState("");
-  //const [alerta, setAlerta] = useState("");
   const [moneda, setMoneda] = useState("");
   const [moneda_value, setMonedaValue] = useState("");
   const [valor, setValor] = useState("");
