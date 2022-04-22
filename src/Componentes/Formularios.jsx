@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import "./styles/Card.css";
 
@@ -29,28 +29,9 @@ export default function Formularios() {
     })
   }, [moneda_value]);
 
-  const getCripto = (option) => {
-    fetch(
-      `https://xlebo5qq46.execute-api.us-east-2.amazonaws.com/cripto/cripto?cripto=${option}`
-    )
-      .then((response) => {
-        response.json().then((r) => {
-          setValor(r.rate);
-          console.log(r);
-          console.log("getCripto");
-          console.log(valor);
-        });
-      })
-      .catch((e) => console.log(e));
-  };
-
-  const handleSubmit = e =>{
-    e.preventDefault();
-    getCripto(moneda_value);
-    console.log("aceptar");
-    console.log(valor);
-   
-    /*emailjs.send("service_b8vy0ww","template_6bj0bqz",{
+  useEffect(() => {
+    if (valor) {
+    emailjs.send("service_b8vy0ww","template_6bj0bqz",{
       moneda: moneda,
       nombre: nombre,
       apellido: apellido,
@@ -61,12 +42,26 @@ export default function Formularios() {
           console.log('SUCCESS!', response.status, response.text);
     }, (err) => {
           console.log('FAILED...', err);
-    });*/
-  }
+    });
+    }
+  }, [valor])
 
-  /*console.log(moneda);
-  console.log(moneda_value);
-  console.log(valor);*/
+  const getCripto = (option) => {
+    fetch(
+      `https://xlebo5qq46.execute-api.us-east-2.amazonaws.com/cripto/cripto?cripto=${option}`
+    )
+      .then((response) => {
+        response.json().then((r) => {
+          setValor(r.rate);
+        });
+      })
+      .catch((e) => console.log(e));
+  };
+
+  const handleSubmit = e =>{
+    e.preventDefault();
+    getCripto(moneda_value);
+  }
 
   return (
     <div className="fondo">
@@ -126,54 +121,6 @@ export default function Formularios() {
           </div>
 
         </div>
-
-        {/* <div className="fondoradio">
-          <p className="nombreAlerta">Elegir alerta</p>
-          <label htmlFor="" className="nombreradio">
-            1-hs
-          </label>
-          <input
-            type="radio"
-            id="1hs"
-            name="alerta"
-            value="1hs"
-            className="nombreradio"
-            onChange={(e) => setAlerta(e.target.value)}
-          />
-          <label htmlFor="" className="nombreradio">
-            1-día
-          </label>
-          <input
-            type="radio"
-            id="1dia"
-            name="alerta"
-            value="1dia"
-            className="nombreradio"
-            onChange={(e) => setAlerta(e.target.value)}
-          />
-          <label htmlFor="" className="nombreradio">
-            1-sem
-          </label>
-          <input
-            type="radio"
-            id="1sem"
-            name="alerta"
-            value="1sem"
-            className="nombreradio"
-            onChange={(e) => setAlerta(e.target.value)}
-          />
-          <label htmlFor="" className="nombreradio">
-            Cambios
-          </label>
-          <input
-            type="radio"
-            id="cambios"
-            name="alerta"
-            value="cambios"
-            className="nombreradio"
-            onChange={(e) => setAlerta(e.target.value)}
-          />
-        </div> */}
 
         <button className="btn btn-primary" id="aceptar" onClick={handleSubmit}>
           Aceptar

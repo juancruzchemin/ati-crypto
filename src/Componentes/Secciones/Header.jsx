@@ -7,7 +7,6 @@ const Header = () => {
     <div
       style={{ backgroundColor: "#D6EAF8", height: "75px", display: "flex" }}
     >
-      {/* <Menu /> */}
       <BarraLateral
         msjPrincipal="Menu"
         elemento1="Cotizacion"
@@ -19,7 +18,6 @@ const Header = () => {
           display: "flex",
           margin: "0 auto",
           justifyContent: "center",
-          // marginRight: "260px",
         }}
       >
         <h1 style={{ marginTop: "5px" }}>Bienvenido AppCrypto</h1>
