@@ -24,6 +24,7 @@
 .nombreform{
     width: 300px;
     margin: 0 auto;
+    border-radius: 10px;
 }
 .nombrelabel{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
