@@ -60,9 +60,6 @@ export default function Formularios() {
   const handleSubmit = e =>{
     e.preventDefault();
     getCripto(moneda_value);
-    setNombre('');
-    setApellido('');
-    setMail('');
   }
 
   return (
